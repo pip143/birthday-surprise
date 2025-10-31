@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise for You! </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="animated-bg"></div>
+    <div id="particleContainer"></div>
+    <audio id="backgroundMusic" loop>
+        <source src="bg/happy-birthday-to-you-370804.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="customAudio">
+        <source src="bg/recording.mp3" type="audio/mpeg">
+    </audio>
+    <div class="card-container relative z-10 p-10 md:p-16 glass-card rounded-3xl max-w-3xl w-11/12 text-center smooth-transition">
+        <h1 id="mainGreeting" class="dancing-script text-6xl md:text-7xl font-bold text-white mb-8 drop-shadow-2xl text-fade-in">
+            <span class="heart-beat inline-block"></span> Surprise! <span class="heart-beat inline-block"></span>
+        </h1>
+        <p id="interactiveMessage" class="poppins text-xl md:text-2xl text-white mb-10 leading-relaxed smooth-transition text-fade-in" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+            Click the button below to start our little journey...
+        </p>
+        <div id="progressDots" class="progress-dots mb-8"></div>
+        <button id="mainActionButton" class="btn-glow pulse-animation bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-full shadow-2xl smooth-transition transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-pink-300 text-xl md:text-2xl">
+             Click Me! 
+        </button>
+        <button id="playCustomAudioButton" class="mt-8 btn-glow bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-bold py-4 px-12 rounded-full shadow-2xl smooth-transition transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-purple-300 text-xl md:text-2xl hidden">
+             Listen to my special message! 
+        </button>
+        <button id="resetButton" class="mt-6 bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold py-3 px-10 rounded-full shadow-lg smooth-transition transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 text-lg hidden">
+             Start Over
+        </button>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
